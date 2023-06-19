@@ -22,14 +22,7 @@ class BusinessController {
         }
     }
 
-    static put = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-        } catch (err) {
-            next(err);
-        }
-    }
-
-    static delete = async (req: Request, res: Response, next: NextFunction) => {
+    static postOne = async (req: Request, res: Response, next: NextFunction) => {
         try {
         } catch (err) {
             next(err);

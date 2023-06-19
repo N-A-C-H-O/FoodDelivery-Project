@@ -4,9 +4,9 @@ import BusinessController from "../controllers/businessController";
 
 const businessRouter = Router();
 
-businessRouter.get("/", );
-businessRouter.get("/:bid", );
-businessRouter.post("/", );
-businessRouter.post("/:bid/product", );
+businessRouter.get("/", BusinessController.get);
+businessRouter.get("/:bid", BusinessController.getOne);
+businessRouter.post("/", BusinessController.post);
+businessRouter.post("/:bid/product", BusinessController.postOne);
 
 export default businessRouter;

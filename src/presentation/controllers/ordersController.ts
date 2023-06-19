@@ -28,13 +28,6 @@ class OrdersController {
             next(err);
         }
     }
-
-    static delete = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-        } catch (err) {
-            next(err);
-        }
-    }
 }
 
 export default OrdersController;

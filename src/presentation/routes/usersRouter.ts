@@ -4,8 +4,8 @@ import UsersController from "../controllers/usersController";
 
 const usersRouter = Router();
 
-usersRouter.get("/", );
-usersRouter.get("/:uid", );
-usersRouter.post("/", );
+usersRouter.get("/", UsersController.get);
+usersRouter.get("/:uid", UsersController.getOne);
+usersRouter.post("/", UsersController.post);
 
 export default usersRouter;
