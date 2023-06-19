@@ -1,8 +1,8 @@
 import express from "express";
 
-import businessRouter from "../routes/businessRouter.js"
-import ordersRouter from "../routes/ordersRouter.js"
-import usersRouter from "../routes/usersRouter.js"
+import businessRouter from "../routes/businessRouter.ts"
+import ordersRouter from "../routes/ordersRouter.ts"
+import usersRouter from "../routes/usersRouter.ts"
 
 import errorHandler from "../middlewares/errorHandler.ts";
 
