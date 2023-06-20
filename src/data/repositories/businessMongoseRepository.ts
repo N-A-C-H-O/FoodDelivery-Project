@@ -1,17 +1,37 @@
 import BusinessModel from "../models/businessModel";
+import Business from "../../domain/entities/business";
 
 class BusinessMongooseRepository {
-    async find() {
-    }
+  async find() {
+    const businessDocs = await BusinessModel.find();
 
-    async findOne(id: string) {
-    }
+    if (!(businessDocs.length > 0)) return null;
 
-    async save(data: object) {
-    }
+    return businessDocs.map((doc) => new Business({ name: doc.name, products: doc.products }));
+  }
 
-    async update(id: string, data: object) {
-    }
+  async findOne(id: string) {
+    const businessDoc = await BusinessModel.findById(id);
+
+    if (!businessDoc) return null;
+
+    return new Business({ name: businessDoc.name, products: businessDoc.products });
+  }
+
+  async save(data: object) {
+    const newBusinessDoc = new BusinessModel(data);
+    await newBusinessDoc.save();
+
+    return true;
+  }
+
+  async update(id: string, data: object) {
+    const businessDoc = await BusinessModel.findByIdAndUpdate(id, data, { new: true });
+
+    if (!businessDoc) return null;
+
+    return new Business({ name: businessDoc.name, products: businessDoc.products });
+  }
 }
 
 export default BusinessMongooseRepository;
