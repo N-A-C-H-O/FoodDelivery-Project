@@ -1,17 +1,17 @@
 import OrderModel from "../models/businessModel";
 
-class orderMongooseRepository {
-    async list() {
+class OrderMongooseRepository {
+    async find() {
     }
 
-    async getOne() {
+    async findOne(id: string) {
     }
 
-    async createOne() {
+    async save(data: object) {
     }
 
-    async resolveOne() {
+    async update(id: string, data: object) {
     }
 }
 
-export default orderMongooseRepository;
+export default OrderMongooseRepository;

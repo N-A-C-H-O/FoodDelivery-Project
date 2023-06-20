@@ -1,17 +1,17 @@
 import BusinessModel from "../models/businessModel";
 
-class businessMongooseRepository {
-    async list() {
+class BusinessMongooseRepository {
+    async find() {
     }
 
-    async getOne() {
+    async findOne(id: string) {
     }
 
-    async save() {
+    async save(data: object) {
     }
 
-    async update() {
+    async update(id: string, data: object) {
     }
 }
 
-export default businessMongooseRepository;
+export default BusinessMongooseRepository;

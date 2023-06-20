@@ -1,17 +1,17 @@
 import UserModel from "../models/businessModel";
 
-class userMongooseRepository {
-    async list() {
+class UserMongooseRepository {
+    async find() {
     }
 
-    async getOne() {
+    async findOne(id: string) {
     }
 
-    async save(){
+    async save(data: object) {
     }
 
-    async update(){
+    async update(id: string, data: object) {
     }
 }
 
-export default userMongooseRepository;
+export default UserMongooseRepository;
