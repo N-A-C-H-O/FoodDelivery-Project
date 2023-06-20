@@ -22,4 +22,6 @@ const OrderSchema = new Schema({
     }
 });
 
-export const UserModel = model(ordersCollection, OrderSchema);
+const OrderModel = model(ordersCollection, OrderSchema);
+
+export default OrderModel;

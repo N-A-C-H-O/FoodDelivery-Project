@@ -11,4 +11,6 @@ const BusinessSchema = new Schema({
     }
 });
 
-export const UserModel = model(businessCollection, BusinessSchema);
+const BusinessModel = model(businessCollection, BusinessSchema);
+
+export default BusinessModel;
