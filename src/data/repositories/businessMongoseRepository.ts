@@ -25,10 +25,14 @@ class BusinessMongooseRepository {
     return true;
   }
 
-  async update(id: string, data: object) {
-    const businessDoc = await BusinessModel.findByIdAndUpdate(id, data, { new: true });
+  async insertOne(id: string, data: object) {
+    const businessDoc = await BusinessModel.findById(id);
 
     if (!businessDoc) return null;
+
+    businessDoc.products.push(data);
+
+    await BusinessModel.findByIdAndUpdate(id, businessDoc, { new: true });
 
     return new Business({ name: businessDoc.name, products: businessDoc.products });
   }

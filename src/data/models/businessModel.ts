@@ -6,9 +6,7 @@ const BusinessSchema = new Schema({
     name: {
         type: Schema.Types.String,
     },
-    products: {
-        type: Schema.Types.Array
-    }
+    products: []
 });
 
 const BusinessModel = model(businessCollection, BusinessSchema);
